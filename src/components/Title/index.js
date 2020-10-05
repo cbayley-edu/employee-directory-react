@@ -1,7 +1,6 @@
 import React from "react";
-// import "./style.css";
 
-export default function Title(props) {
+export default function Title() {
   return (
     <div className="jumbotron">
       <div className="container">

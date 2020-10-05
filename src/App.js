@@ -5,7 +5,7 @@ import Title from './components/Title';
 import Search from './components/Search';
 import Headings from './components/Headings';
 import EmployeeCard from './components/EmployeeCard';
-import getUsers from "./utils/API";
+// import getUsers from "./utils/API";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

@@ -1,7 +1,6 @@
 import React from "react";
-// import "./style.css";
 
-export default function Headings(props) {
+export default function Headings() {
   return (
     <div>
       <table className="table">

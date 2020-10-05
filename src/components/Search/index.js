@@ -1,7 +1,6 @@
 import React from "react";
-// import "./style.css";
 
-export default function Search(props) {
+export default function Search() {
   return (
     <div>
       <center>

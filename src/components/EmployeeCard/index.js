@@ -1,7 +1,6 @@
 import React from "react";
-// import "./style.css";
 
-export default function EmployeeCard(props) {
+export default function EmployeeCard() {
   return (
     <div className="card">
       <p>EmployeeCard</p>
