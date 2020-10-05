@@ -8,7 +8,7 @@ export default function Search() {
             <div className="input-group-prepend">
               <span className="input-group-text" id="inputGroup-sizing-lg">Search</span>
             </div>
-            <input type="text" className="form-control" placeholder="search box"></input>
+            <input type="text" className="form-control" placeholder="type first/last name"></input>
         </div>
       </center>
       <br></br>
