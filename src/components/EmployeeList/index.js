@@ -1,6 +1,5 @@
 import React, { useState, useEffect }  from "react";
 import Gender from '../Gender';
-import './style.css';
 
 export default function EmployeeList({ employees }) {
   const [sortedEmployees, updateSortedEmployees] = useState([]);
@@ -62,7 +61,7 @@ export default function EmployeeList({ employees }) {
         <thead>
           <tr>
             <th scope="col"></th>
-            <th scope="col" onClick={() => {sortEmployees("login.username")}}>User Name<span className="pointer"></span></th>
+            <th scope="col" onClick={() => {sortEmployees("login.username")}}>User Name</th>
             <th scope="col" onClick={() => {sortEmployees("name.first")}}>First</th>
             <th scope="col" onClick={() => {sortEmployees("name.last")}}>Last</th>
             <th scope="col" onClick={() => {sortEmployees("phone")}}>Main Phone</th>
