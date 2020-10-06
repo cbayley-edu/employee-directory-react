@@ -1,62 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Wrapper from './components/Wrapper';
 import Title from './components/Title';
 import Search from './components/Search';
-import Headings from './components/Headings';
-import EmployeeCard from './components/EmployeeCard';
-import getUsers from "./utils/API";
+import EmployeeList from './components/EmployeeList';
+import API from "./utils/API";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
+  const [employees, updateEmployees] = useState([]);
+  const [employeesDataSet, updateEmployeesDataSet] = useState([]);
 
-  const emps = getUsers;
-
-  const [ empData, setEmpData ] = useState({
-    employees: emps
-  })
-  const { employees } = empData
-
-  const handleChange = (e) => {
-    e.preventDefault();
-    const search = e.target.value.toLowerCase();
-    let newEmployees = [];
-    if ( search !== "") {
-      newEmployees = emps.filter(employee => {
-        return (
-          search === employee.name.first.toLowerCase().slice(0, search.length) || 
-          search === employee.name.last.toLowerCase().slice(0, search.length))})
-    } else {
-      newEmployees = emps;
-    }
-    setEmpData({ employees: newEmployees })
-  }
-
-  const handleOnClick = () => {
-
-    setEmpData({ employees: employees.sort(sortByName)})
-  }
-
-  function sortByName( a, b ) {
-    const nameA = a.name.first.toLowerCase();
-    const nameB = b.name.first.toLowerCase();
-
-    let comparison = 0;
-    if (nameA > nameB) {
-      comparison = 1;
-    } else if (nameA < nameB) {
-      comparison = -1;
-    }
-    return comparison
-  }
+  useEffect(() => {
+    API.getUsers()
+    .then(({ data: { results } }) => updateEmployees(results));
+  }, []);
 
   return (
     <Wrapper>
       <Title />
-      <Search handleChange={handleChange}/>
-      <Headings />
-      <EmployeeCard employees={employees} onClick={handleOnClick} />
+      <Search employees={employees} updateEmps={updateEmployeesDataSet}/>
+      <EmployeeList employees={employeesDataSet} />
     </Wrapper>
   );
 }
