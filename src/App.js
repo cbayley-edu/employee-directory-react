@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     API.getUsers()
-    .then(({ data: { results } }) => updateEmployees(results));
+    .then(({ data: { results } }) => updateEmployees(results))
   }, []);
 
   return (

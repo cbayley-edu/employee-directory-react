@@ -5,8 +5,9 @@ export default function Search({ employees, updateEmps }) {
 
     useEffect(() => {
         const filteredEmployees =
-        searchInput === "" ? employees : employees.filter(({ name: { first } }) =>
+        searchInput === "" ? employees : employees.filter(({ name: { first, last } }) =>
                   first.toLowerCase().indexOf(searchInput.toLowerCase()) >= 0
+                  || last.toLowerCase().indexOf(searchInput.toLowerCase()) >= 0
               );
     
         updateEmps(filteredEmployees);
@@ -16,11 +17,16 @@ export default function Search({ employees, updateEmps }) {
     return (
         <div>
         <center>
-            <div className="input-group input-group-lg w-25">
+            <div className="input-group input-group-lg w-50">
                 <div className="input-group-prepend">
                 <span className="input-group-text" id="inputGroup-sizing-lg">Search</span>
                 </div>
-                <input value={searchInput} type="text" className="form-control" placeholder="type first/last name" onChange={e => updateSearchInput(e.target.value)}></input>
+                <input value={searchInput} 
+                    type="text" 
+                    className="form-control" 
+                    placeholder="type first/last name" 
+                    onChange={e => updateSearchInput(e.target.value)}>
+                </input>
             </div>
         </center>
         <br></br>
