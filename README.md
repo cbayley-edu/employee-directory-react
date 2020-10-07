@@ -1,68 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Employee Directory
 
-## Available Scripts
+### Unit 19 React Homework: Employee Directory
 
-In the project directory, you can run:
+### User Story
+* AS A user
+* I WANT to be able to view my entire employee directory at once
+* SO THAT I have quick access to their information.
 
-### `npm start`
+## Description
+For this assignment, I created an employee directory using React using components, managing component state, and responding to user events. The application uses axios to make an API call to a random, sample data set of users.  I'm returning 200 random users from this dataset therefore, if you refresh the page, you may get a different set of users than the previous load.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Access the deployed app here: https://cbayley-edu.github.io/employee-directory-react/
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Access the git repo here: https://github.com/cbayley-edu/employee-directory-react
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Table of Contents 
 
-### `npm run build`
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Questions](#questions)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Since this is hosted on github pages, there is no installation required however, if you want to clone or fork my github repo, feel free to do so. After cloning my repo you will have to update information in the package.json.  You will need to run a few commands in the terminal as well:
+* npm i  
+* npm run build
+* npm start  (this application is built to run locally on port 3000, which can be changed in server.js)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can also build your own vanilla React app by running ```npx create-react-app APP_NAME``` in your terminal. (Replace APP_NAME with your app name.)
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Access the application here: https://cbayley-edu.github.io/employee-directory-react/
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Welcome to the Employee Directory!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![employee-directory](./assets/employee-directory.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Use the search box to search the directory by First or Last Name. As you type in letters, the result set will update. It searches both the First Name or the Last Name and searches within the string (like/contains).
 
-## Learn More
+![name-search](./assets/name-search.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Click on a column heading to sort the data in ascending order.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![a-to-z-sort](./assets/a-to-z-sort.png)
 
-### Code Splitting
+Then click on the column heading again to sort the data in descending order.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![z-to-a-sort](./assets/z-to-a-sort.png)
 
-### Analyzing the Bundle Size
+You can sort ascending/descending by any column by clicking on the heading. You can also sort at any time - with or without search results.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![headings](./assets/headings.png)
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## License 
 
-### Advanced Configuration
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+This project is covered by the above license(s). Click on the badge for more information.
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Questions 
 
-### `npm run build` fails to minify
+GitHub username: cbayley-edu
+GitHub profile link: https://github.com/cbayley-edu
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Please email me at christinabayley@comcast.net with any questions you have or any issues you come across.
+
